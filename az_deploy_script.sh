@@ -3,8 +3,8 @@ az group create \
 --name udac-prj-1-rg
 
 az sql server create \
---admin-user udackkadm \
---admin-password jfhDk39Dcdl3- \
+--admin-user {ADMIN} \
+--admin-password {PW} \
 --name udac-prj1-sql-server \
 --resource-group udac-prj-1-rg \
 --location westeurope \
@@ -23,8 +23,8 @@ az sql server firewall-rule create \
 -g udac-prj-1-rg \
 -s udac-prj1-sql-server \
 -n clientip \
---start-ip-address 109.43.48.255 \
---end-ip-address 109.43.48.255 \
+--start-ip-address {IP} \
+--end-ip-address {IP} \
 --verbose
 
 az sql db create \
